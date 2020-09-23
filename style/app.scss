@@ -542,15 +542,16 @@ footer {
     }
 
     & .brand-holder {
-        text-align: left;
+        display: flex;
+        flex-direction: column;
 
-        & img {
-            margin: 16px 0;
-            height: 120px;
-        }
-
-        & img:first-child {
-            height: 100px;
+        & a {
+            width: 100%;
+            text-align: left;
+           & img {
+                margin: 16px auto;
+                width: 120px;
+            }
         }
     }
 }
