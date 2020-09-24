@@ -10115,8 +10115,13 @@ a {
   text-decoration: none;
 }
 
+.contact-mail {
+  margin-bottom: 32px;
+}
+
 .social-nav {
   display: flex;
+  margin-bottom: 32px;
 }
 .social-nav .social-link {
   color: #4eb913;
@@ -10380,14 +10385,17 @@ footer .display {
   margin-bottom: 32px;
 }
 footer .brand-holder {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+footer .brand-holder a {
+  width: 100%;
   text-align: left;
 }
-footer .brand-holder img {
-  margin: 16px 0;
-  height: 120px;
-}
-footer .brand-holder img:first-child {
-  height: 100px;
+footer .brand-holder a img {
+  margin: 16px auto;
+  width: 120px;
 }
 
 @media (max-width: 768px) {
