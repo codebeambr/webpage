@@ -1,3 +1,3 @@
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.yourdomain.com [NC]
-RewriteRule ^(.*)$ https://codebeambr.com/$1 [L,R=301]
+RewriteRule ^(.*)$ https://codebeambr.com/ [L,R=301]
