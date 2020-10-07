@@ -10376,6 +10376,13 @@ header.scrolled {
 footer {
   padding: 56px 0;
   font-size: 2rem;
+  position: relative;
+}
+footer .br-flag {
+  font-size: 56px;
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
 }
 footer .main-link {
   word-wrap: break-word;

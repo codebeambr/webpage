@@ -536,6 +536,14 @@ header {
 footer {
     padding: 56px 0;
     font-size: 2rem;
+    position: relative;
+
+    & .br-flag {
+        font-size: 56px;
+        position: absolute;
+        bottom: 32px;
+        right: 32px;
+    }
 
     & .main-link {
         word-wrap: break-word;
