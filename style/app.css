@@ -10252,6 +10252,11 @@ header.scrolled {
   margin: 0 auto 40px;
 }
 
+.conduct {
+  display: block;
+  margin-top: 24px;
+}
+
 .event-theme {
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
