@@ -10398,6 +10398,10 @@ header.scrolled {
   -o-background-size: cover;
   background-size: cover;
 }
+.tickets h2 {
+  color: #4eb913;
+  margin-bottom: 32px;
+}
 
 .event-schedule {
   padding: 120px 0;

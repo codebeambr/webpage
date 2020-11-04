@@ -558,6 +558,10 @@ header {
     -o-background-size: cover;
     background-size: cover;
 
+    & h2 {
+        color: $primary;
+        margin-bottom: 32px;
+    }
 }
 
 .event-schedule {
