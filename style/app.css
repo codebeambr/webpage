@@ -10097,6 +10097,35 @@ a {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.day-trigger {
+  font-size: 40px;
+  vertical-align: middle;
+  position: relative;
+  display: inline;
+  color: #4eb913;
+  text-transform: uppercase;
+}
+.day-trigger::before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 20px solid #4eb913;
+  left: -48px;
+  bottom: 14px;
+  transition: all 0.5s ease-in-out;
+}
+.day-trigger:hover {
+  color: white;
+}
+.day-trigger:hover::before {
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 20px solid #4eb913;
+}
+
 .neutral-link {
   color: white;
 }
@@ -10370,6 +10399,66 @@ header.scrolled {
   background-size: cover;
 }
 
+.event-schedule {
+  padding: 120px 0;
+  min-height: 100vh;
+}
+.event-schedule h2 {
+  margin-bottom: 32px;
+}
+
+.schedule-item {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 24px;
+  text-align: left;
+  margin: 16px 0;
+}
+.schedule-item.desktop {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.schedule-item .time {
+  flex-grow: 0;
+  min-width: 200px;
+  width: 200px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.schedule-item .half {
+  flex-grow: 2;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.schedule-item .half.no-border {
+  border-right: 0;
+}
+.schedule-item .full {
+  flex-grow: 4;
+}
+.schedule-item .label, .schedule-item .type {
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 16px;
+}
+.schedule-item .name {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.schedule-item .about {
+  font-size: 20px;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+.schedule-item div {
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  background-color: #000;
+}
+
 .investment {
   padding: 140px 0;
   background: linear-gradient(to right, #4eb913, #15e6ff);
@@ -10411,6 +10500,20 @@ footer .brand-holder a img {
 }
 
 @media (max-width: 768px) {
+  .schedule-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 16px;
+  }
+  .schedule-item .time {
+    font-size: 32px;
+    width: 100%;
+  }
+  .schedule-item div {
+    border-right: 0 !important;
+  }
+
   .desktop {
     display: none !important;
   }

@@ -216,6 +216,37 @@ a {
     }
 }
 
+.day-trigger {
+    font-size: 40px;
+    vertical-align: middle;
+    position: relative;
+    display: inline;
+    color: $primary;
+    text-transform: uppercase;
+
+    &::before {
+    content: '';
+    width: 0; 
+    height: 0; 
+    position: absolute;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 20px solid $primary;
+    left: -48px;
+    bottom: 14px;
+    transition: all .5s ease-in-out;
+    }
+
+    &:hover {
+        color: $white;
+        &::before {
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 20px solid $primary;
+            }
+    }
+}
+
 .neutral-link {
     color: $white;
     &:hover {
@@ -529,6 +560,76 @@ header {
 
 }
 
+.event-schedule {
+    padding: 120px 0;
+    min-height: 100vh;
+
+    & h2 {
+        margin-bottom: 32px;
+    }
+}
+
+.schedule-item {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    font-size: 24px;
+    text-align: left;
+    margin: 16px 0;
+
+    &.desktop {
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    & .time {
+        flex-grow: 0;
+        min-width: 200px;
+        width: 200px;
+        border-right: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    & .half {
+        flex-grow: 2;
+        border-right: 1px solid rgba(255, 255, 255, .1);
+
+        &.no-border {
+            border-right: 0;
+        }
+    }
+
+    & .full {
+        flex-grow: 4;
+    }
+
+    & .label, & .type {
+        text-transform: uppercase;
+        opacity: .4;
+        margin-bottom: 16px;
+    }
+
+    & .name {
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+
+    & .about {
+        font-size: 20px;
+        opacity: .7;
+        margin-bottom: 16px;
+    }
+
+    & div {
+        margin: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.card-body {
+    background-color: #000;
+}
+
 .investment {
     padding: 140px 0;
     background: $secondary-gradient;
@@ -578,6 +679,22 @@ footer {
 
 $breakpoint-tablet: 768px;
 @media (max-width: $breakpoint-tablet) {
+
+    .schedule-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 16px;
+
+        & .time {
+            font-size: 32px;
+            width: 100%;
+        }
+
+        & div {
+            border-right: 0 !important;
+        }
+    }
     
   .desktop {
       display: none !important;
