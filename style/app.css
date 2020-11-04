@@ -10099,9 +10099,9 @@ a {
 
 .day-trigger {
   font-size: 40px;
-  vertical-align: middle;
+  margin-bottom: 24px;
   position: relative;
-  display: inline;
+  display: block;
   color: #4eb913;
   text-transform: uppercase;
 }
